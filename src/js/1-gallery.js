@@ -77,6 +77,7 @@ function createMarkup(arr) {
             class="gallery-image"
             src="${img.preview}"
             alt="${img.description}"
+            title="${img.description}"
             />
         </a>
       </li>`
@@ -90,21 +91,3 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 galleryBox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
-
-// galleryBox.addEventListener('click', hendleClick);
-
-// function hendleClick(event) {
-//   if (event.currentTarget === event.target) {
-//     return;
-//   }
-//   const imgLink = event.target.dataset.source;
-//   const imgDescription = event.target.alt;
-
-//   const instance = basicLightbox.create(`
-//     <div class='modal'>
-//     <img src='${imgLink}' alt='${imgDescription}'/>
-//     </div>
-//   `);
-
-//   instance.show();
-// }
