@@ -77,7 +77,6 @@ function createMarkup(arr) {
             class="gallery-image"
             src="${img.preview}"
             alt="${img.description}"
-            title="${img.description}"
             />
         </a>
       </li>`
@@ -90,4 +89,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 galleryBox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
+  captionsData: 'alt',
+  captionClass: 'text-center',
 });
