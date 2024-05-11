@@ -64,7 +64,7 @@ const images = [
   },
 ];
 
-const galleryBox = document.querySelector('.gallery');
+let galleryBox = document.querySelector('.gallery');
 galleryBox.insertAdjacentHTML('beforeend', createMarkup(images));
 
 function createMarkup(arr) {

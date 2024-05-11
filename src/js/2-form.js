@@ -19,6 +19,7 @@ function handleSubmit(event) {
     return;
   }
 
+  console.log(formData);
   event.target.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
