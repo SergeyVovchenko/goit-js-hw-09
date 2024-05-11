@@ -26,7 +26,7 @@ function handleSubmit(event) {
 
 function handleInput(event) {
   const key = event.target.name;
-  formData[key] = event.target.value;
+  formData[key] = event.target.value.trim();
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
