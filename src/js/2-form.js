@@ -6,7 +6,7 @@ form.addEventListener('submit', handleSubmit);
 form.addEventListener('input', handleInput);
 messagelocalStorage();
 
-const formData = {
+let formData = {
   email: '',
   message: '',
 };
@@ -19,7 +19,7 @@ function handleSubmit(event) {
     return;
   }
 
-  console.log(formData);
+  console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   event.target.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
